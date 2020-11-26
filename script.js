@@ -90,6 +90,7 @@ for (i of stateObjects) {
     child.setAttribute("ondragstart", "drag(event)");
     child.setAttribute("draggable", "true");
     child.setAttribute('ondblclick', 'onDClick(this)');
+    child.setAttribute('onclick', 'onSClick(this)');
     child.setAttribute('class', `${i.region}`);
     parent.appendChild(child);
 };
@@ -116,20 +117,33 @@ function drop(event, parent) {
 
 //Double click functionality for mobile support until I learn touch events
 
+function onSClick(self) {
+    let parent = self.parentElement;
+    let grandparent = parent.parentElement;
+    let uncles = Array.from(grandparent.children);
+    let index = uncles.indexOf(parent);
+    parent.removeChild(self);
+    if (index==2){
+        uncles[0].appendChild(self);
+    } else {
+        uncles[index+1].appendChild(self);
+    };
+    for (let i of uncles){
+        sortNodes(i);
+        tally(i);
+    };
+};
+
 function onDClick(self) {
     let parent = self.parentElement;
     let grandparent = parent.parentElement;
     let uncles = Array.from(grandparent.children);
     let index = uncles.indexOf(parent);
-    if (index == 0) {
-        parent.removeChild(self);
+    parent.removeChild(self);
+    if (index==0){
         uncles[2].appendChild(self);
-    } else if (index == 1) {
-        parent.removeChild(self);
-        uncles[0].appendChild(self);
-    } else if (index == 2) {
-        parent.removeChild(self);
-        uncles[1].appendChild(self);
+    } else {
+        uncles[index-1].appendChild(self);
     };
     for (let i of uncles){
         sortNodes(i);
