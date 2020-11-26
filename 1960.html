@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1960: Making of a President</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet">  
+</head>
+<body>
+    <div class="header">
+        <img src="assets/title.png" alt="Title">
+    </div>
+    <div class="container">
+        <div class="item"><p><img src="assets/kennedy.png" alt="Kennedy"><br>KENNEDY</p><p id="KennedyElector">0</p></div>
+        <div class="item"><p><img src="assets/unclaimed.png" alt="Unclaimed"><br>UNCLAIMED</p><p id="unclaimedElector">0</p></div>
+        <div class="item"><p><img src="assets/nixon.png" alt="Nixon"><br>NIXON</p><p id="NixonElector">0</p></div>
+    </div>
+    <div class="container">
+
+        <div class="item" id="Kennedy" ondragover="allowDrop(event)" ondrop="drop(event, this), sortNodes(this)"></div>
+        <div class="item" id="unclaimed" ondragover="allowDrop(event)" ondrop="drop(event, this), sortNodes(this)"></div>
+        <div class="item" id="Nixon" ondragover="allowDrop(event)" ondrop="drop(event, this), sortNodes(this)"></div>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

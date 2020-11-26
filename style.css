@@ -1,0 +1,89 @@
+body{
+    height: max-content;
+    padding: 2vw;
+
+    background-image: url("assets/background.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    font-family: 'Alata', sans-serif;
+}
+
+.header{
+    text-align: center;
+    padding: 5vw;
+}
+
+.header img{
+    min-width: 80%;
+    width: 80%;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1vw;
+}
+
+p{
+    text-align: center;
+
+    margin: 0;
+    padding: 0;
+
+    color: #486e6f;
+    -webkit-text-stroke-color: #f2efe1;
+    -webkit-text-stroke-width: 1px;
+    font-size: 5vw;
+    font-weight: 900;
+}
+
+.container img{
+    padding: 10px 0 0 0;
+    max-height: 128px;
+}
+
+.item{
+    min-width: 128px;
+    background-color: rgba(255, 244, 227, 0.7);
+    border-radius: 5px;
+}
+
+button{
+    display: block;
+    width: 60%;
+    min-height: 2em;
+
+    border-radius: 12px;
+    border: none;
+    margin: 0.7em auto;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+    
+    font-family: 'Alata', sans-serif;
+    color: #4b4b49;
+    font-size: 2vw;
+}
+
+#Kennedy button{
+    background-color: #a0b9c8;
+}
+
+#Kennedy button:hover{
+    background-color: #6e92a7;
+}
+
+#unclaimed button{
+    background-color: #93b2b0;
+}
+
+#unclaimed button:hover{
+    background-color: #698786;
+}
+
+#Nixon button{
+    background-color: #e2908f;
+}
+
+#Nixon button:hover{
+    background-color: #ce6867;
+}
