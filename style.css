@@ -34,13 +34,13 @@ p{
     color: #486e6f;
     -webkit-text-stroke-color: #f2efe1;
     -webkit-text-stroke-width: 1px;
-    font-size: 4em;
+    font-size: 32pt;
     font-weight: 900;
 }
 
 .container img{
     padding: 10px 0 0 0;
-    min-height: 128px;
+    width: 50%;
 }
 
 .item{
@@ -50,13 +50,13 @@ p{
 }
 
 #Kennedy, #unclaimed, #Nixon {
-    min-height: 200em;
+    min-height: 1650pt;
 }
 
 button{
     display: block;
-    width: 60%;
-    min-height: 2em;
+    width: 70%;
+    min-height: 24pt;
 
     border-radius: 12px;
     border: none;
@@ -65,7 +65,7 @@ button{
     
     font-family: 'Alata', sans-serif;
     color: #4b4b49;
-    font-size: 1.5em;
+    font-size: 12pt;
 }
 
 button.E{
