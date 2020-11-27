@@ -34,7 +34,7 @@ p{
     color: #486e6f;
     -webkit-text-stroke-color: #f2efe1;
     -webkit-text-stroke-width: 1px;
-    font-size: 4vw;
+    font-size: 4em;
     font-weight: 900;
 }
 
@@ -65,7 +65,7 @@ button{
     
     font-family: 'Alata', sans-serif;
     color: #4b4b49;
-    font-size: 1.5vw;
+    font-size: 1.5em;
 }
 
 button.E{
