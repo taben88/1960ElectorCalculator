@@ -85,12 +85,11 @@ const unclaimedField = document.getElementById("unclaimed");
 for (i of stateObjects) {
     let parent = document.getElementById(i.owner);
     let child = document.createElement("button");
-    child.innerHTML = `${i.name} ${i.electors}`;
+    child.innerHTML = `<< ${i.name} ${i.electors} >`;
     child.setAttribute("id", `${i.name}`)
     child.setAttribute("ondragstart", "drag(event)");
     child.setAttribute("draggable", "true");
-    child.setAttribute('ondblclick', 'onDClick(this)');
-    child.setAttribute('onclick', 'onSClick(this)');
+    child.setAttribute('onclick', 'clickChecker(this)');
     child.setAttribute('class', `${i.region}`);
     parent.appendChild(child);
 };
@@ -150,6 +149,22 @@ function onDClick(self) {
         tally(i);
     };
 };
+
+function clickChecker(self){
+    let clickCount = 0;
+    clickCount++;
+    if (clickCount == 1){
+        let singleClickTimer = setTimeout(function(){
+            clickCount = 0;
+            onSClick(self);
+        }, 250);
+    }
+    else if (clickCount==2) {
+        clearTimeout(singleClickTimer);
+        clickCount = 0;
+        onDClick(self);
+        };
+    };
 
 //A function that sorts state html objects within their divs after drop.
 

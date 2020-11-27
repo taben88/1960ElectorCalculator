@@ -34,7 +34,7 @@ p{
     color: #486e6f;
     -webkit-text-stroke-color: #f2efe1;
     -webkit-text-stroke-width: 1px;
-    font-size: 5vw;
+    font-size: 4vw;
     font-weight: 900;
 }
 
@@ -61,29 +61,37 @@ button{
     
     font-family: 'Alata', sans-serif;
     color: #4b4b49;
-    font-size: 2vw;
+    font-size: 1.5vw;
 }
 
-#Kennedy button{
-    background-color: #a0b9c8;
-}
-
-#Kennedy button:hover{
-    background-color: #6e92a7;
-}
-
-#unclaimed button{
-    background-color: #93b2b0;
-}
-
-#unclaimed button:hover{
-    background-color: #698786;
-}
-
-#Nixon button{
+button.E{
     background-color: #e2908f;
 }
 
-#Nixon button:hover{
+button.E:hover{
     background-color: #ce6867;
+}
+
+button.MW{
+    background-color: #93b2b0;
+}
+
+button.MW:hover{
+    background-color: #698786;
+}
+
+button.S{
+    background-color: #a0b9c8;
+}
+
+button.S:hover{
+    background-color: #6e92a7;
+}
+
+button.W{
+    background-color: #d4ba7c;
+}
+
+button.W:hover{
+    background-color: #b2985c;
 }
