@@ -85,7 +85,7 @@ const unclaimedField = document.getElementById("unclaimed");
 for (i of stateObjects) {
     let parent = document.getElementById(i.owner);
     let child = document.createElement("button");
-    child.innerHTML = `<< ${i.name} ${i.electors} >`;
+    child.innerHTML = `${i.name} ${i.electors}`;
     child.setAttribute("id", `${i.name}`)
     child.setAttribute("ondragstart", "drag(event)");
     child.setAttribute("draggable", "true");

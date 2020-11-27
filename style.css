@@ -1,6 +1,10 @@
+*{
+    box-sizing: border-box;
+}
+
 body{
     height: max-content;
-    padding: 2vw;
+    padding: 2%;
 
     background-image: url("assets/background.png");
     background-repeat: no-repeat;
@@ -11,7 +15,7 @@ body{
 
 .header{
     text-align: center;
-    padding: 5vw;
+    padding: 5%;
 }
 
 .header img{
@@ -22,7 +26,7 @@ body{
 .container{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    gap: 1vw;
+    gap: 1%;
 }
 
 p{
@@ -34,39 +38,36 @@ p{
     color: #486e6f;
     -webkit-text-stroke-color: #f2efe1;
     -webkit-text-stroke-width: 1px;
-    font-size: 32pt;
     font-weight: 900;
+    font-size: 32pt;
 }
 
 .container img{
-    padding: 10px 0 0 0;
-    width: 50%;
+    width: 80%;
 }
 
 .item{
-    min-width: 128px;
     background-color: rgba(255, 244, 227, 0.7);
-    border-radius: 5px;
+    border-radius: 20px 20px 0 0;
+    padding: 5% 0;
 }
 
 #Kennedy, #unclaimed, #Nixon {
-    min-height: 1650pt;
+    border-radius: 0 0 20px 20px;
+    min-height: 200vmax;
 }
 
 button{
+    width: 70%;
+    min-height: 2em;
+    margin: 5% auto;
     display: block;
-    width: 80%;
-    min-height: 24pt;
-
-    border-radius: 12px;
+    border-radius: 10px;
     border: none;
-    margin: 0.7em auto;
-    padding: auto 0;
-    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
-    
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);    
     font-family: 'Alata', sans-serif;
     color: #4b4b49;
-    font-size: 12pt;
+    font-size: 16pt;
 }
 
 button.E{
@@ -100,3 +101,25 @@ button.W{
 button.W:hover{
     background-color: #b2985c;
 }
+
+@media (max-width: 62em) {
+    p {
+      font-size: 16pt;
+    }
+    button {
+        font-size: 12pt;
+        padding: 0;
+        width: 90%;
+    }
+  }
+
+@media (max-width: 43em) {
+    p {
+      font-size: 12pt;
+    }
+    button {
+        font-size: 6pt;
+        padding: 0;
+        width: 90%;
+    }
+  }
