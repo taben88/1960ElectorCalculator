@@ -55,12 +55,13 @@ p{
 
 button{
     display: block;
-    width: 70%;
+    width: 80%;
     min-height: 24pt;
 
     border-radius: 12px;
     border: none;
     margin: 0.7em auto;
+    padding: auto 0;
     box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
     
     font-family: 'Alata', sans-serif;
